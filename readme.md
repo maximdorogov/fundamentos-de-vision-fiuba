@@ -17,7 +17,6 @@ Una vez creado el entorno ejecutar el siguiente comando para activar el nuevo en
 ```
 conda activate <NOMBRE>
 ```
-
 ## Instalacion de paquetes
 
 Instalar los paquetes necesarios para la materia con:
