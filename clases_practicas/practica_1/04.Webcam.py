@@ -14,8 +14,10 @@ if __name__ == '__main__':
         # Read the frame from the webcam
         ret, frame = cap.read()
         
+        edges = cv2.Canny(frame, 100, 200)
+
         # Display the frame
-        cv2.imshow('Webcam', frame)
+        cv2.imshow('Webcam', edges)
 
         # Break the loop if the user presses the 'q' key
         if cv2.waitKey(1) & 0xFF == ord('q'):

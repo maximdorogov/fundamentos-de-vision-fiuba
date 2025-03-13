@@ -17,7 +17,7 @@ def draw_detections(frame, detections: List[Any]):
     return frame
 
 if __name__ == '__main__':
-    # Load the YOLOv5 model
+    # Load the YOLO model
     model = YOLO('yolo11m.pt')
 
     # Create a VideoCapture object
