@@ -40,10 +40,12 @@ if __name__ == "__main__":
             frame_rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)
             frame_pil = Image.fromarray(frame_rgb)
 
+            # Depth estimation and mask extraction
             preds = pipe(frame_pil)
             depth2show = preds["depth"]
             depth2show = np.asarray(depth2show)
-
+            
+            # visualization
             image_mask = np.stack((image_mask,)*3, axis=-1)
             cv2.drawContours(image_mask, [contours], -1, (255,255,0), 6)
 
