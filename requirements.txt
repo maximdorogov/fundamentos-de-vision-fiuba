@@ -4,3 +4,4 @@ matplotlib==3.7.1
 ultralytics==8.3.78
 ipykernel==6.9.1
 transformers==5.3.0
+supervision==0.27.0
