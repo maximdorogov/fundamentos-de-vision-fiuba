@@ -34,7 +34,7 @@ if __name__ == "__main__":
         
         # Convert tensor to mask
         if masks is not None and ret:
-            contours = masks.xy[0].astype(np.int)
+            contours = masks.xy[0].astype(np.int32)
             image_mask = masks.data.numpy()[0, :, :].astype(np.uint8)*255
 
             frame_rgb = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB)

@@ -1,5 +1,5 @@
 import cv2
-from ultralytics import YOLO
+
 
 if __name__ == '__main__':
     # Create a VideoCapture object
@@ -14,10 +14,11 @@ if __name__ == '__main__':
         # Read the frame from the webcam
         ret, frame = cap.read()
         
-        edges = cv2.Canny(frame, 100, 200)
+        # uncomment to apply canny edge detection
+        # frame = cv2.Canny(frame, 100, 200)
 
         # Display the frame
-        cv2.imshow('Webcam', edges)
+        cv2.imshow('Webcam', frame)
 
         # Break the loop if the user presses the 'q' key
         if cv2.waitKey(1) & 0xFF == ord('q'):
