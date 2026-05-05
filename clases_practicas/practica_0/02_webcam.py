@@ -15,7 +15,7 @@ if __name__ == '__main__':
         ret, frame = cap.read()
         
         # uncomment to apply canny edge detection
-        # frame = cv2.Canny(frame, 100, 200)
+        frame = cv2.Canny(frame, 100, 200)
 
         # Display the frame
         cv2.imshow('Webcam', frame)
